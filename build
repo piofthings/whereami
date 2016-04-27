@@ -1,0 +1,8 @@
+echo Compiling App
+tsc
+
+cd ui
+echo Compiling UI
+tsc
+
+cd ..

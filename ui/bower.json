@@ -1,0 +1,27 @@
+{
+  "name": "whereami",
+  "authors": [
+    "Sumit Kumar Maitra <sumitkm@gmail.com>"
+  ],
+  "description": "Where am I UI",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "knockout": "knockoutjs#~3.4.0",
+    "requirejs": "~2.2.0",
+    "text": "~2.0.15",
+    "bootstrap": "~3.3.6"
+  }
+}

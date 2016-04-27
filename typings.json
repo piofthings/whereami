@@ -1,0 +1,9 @@
+{
+  "name": "whereami",
+  "version": false,
+  "dependencies": {},
+  "ambientDependencies": {
+    "github-electron": "registry:dt/github-electron#0.37.6+20160417155838",
+    "node": "registry:dt/node#4.0.0+20160412142033"
+  }
+}

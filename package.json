@@ -1,0 +1,36 @@
+{
+  "name": "whereami",
+  "version": "0.0.1",
+  "description": "Where am I!",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodeunit tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piofthings/whereami.git"
+  },
+  "keywords": [
+    "GPS",
+    "geo",
+    "positioning",
+    "mapping"
+  ],
+  "author": "Sumit Kumar Maitra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/piofthings/whereami/issues"
+  },
+  "homepage": "https://github.com/piofthings/whereami#readme",
+  "dependencies": {
+    "byline": "^4.2.1",
+    "form-data": "^1.0.0-rc4",
+    "nconf": "^0.8.4",
+    "node-fetch": "^1.5.1",
+    "node-gps-parser": "0.0.4",
+    "object-assign": "^4.0.1",
+    "pinkie-promise": "^2.0.1",
+    "querystring": "^0.2.0",
+    "request": "^2.72.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "whereami",
+  "version": false,
+  "dependencies": {},
+  "ambientDependencies": {
+    "bootstrap": "registry:dt/bootstrap#3.3.5+20160316155526",
+    "jquery": "registry:dt/jquery#1.10.0+20160316155526",
+    "knockout": "registry:dt/knockout#0.0.0+20160409112158",
+    "leaflet": "registry:dt/leaflet#0.7.3+20160412142116",
+    "mapbox": "registry:dt/mapbox#1.6.3+20160317120654",
+    "require": "registry:dt/require#2.1.20+20160316155526"
+  }
+}
