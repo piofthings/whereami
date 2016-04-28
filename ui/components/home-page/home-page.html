@@ -1,19 +1,6 @@
-<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
-<style>
-  body { margin:0; padding:0; }
-  #map { position:absolute;
-      top:0; bottom:0;
-      width:auto;
-      height: auto;
-      top: 0;
-      right: 0;
-      margin-bottom: 50px;}
-</style>
-</head>
-<body>
-    <div id='map' style='top: 0px; left: 0; width: 100%; height: 100%;'></div>
-    <div style="top: 20px; left: 60%; position: absolute">
-        <div>Top Speed: <span data-bind="text: topSpeedInMph"></span></div>
-        <div>Average Speed: <span data-bind="text: averageSpeedInMph"></span></div>
-    </div>
-</body>
+
+<div id='map' class="map-container"></div>
+<div style="top: 20px; left: 60%; position: absolute">
+    <div>Top Speed: <span data-bind="text: topSpeedInMph"></span></div>
+    <div>Average Speed: <span data-bind="text: averageSpeedInMph"></span></div>
+</div>

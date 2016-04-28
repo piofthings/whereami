@@ -47,6 +47,7 @@ class FileProcessor {
         let speedSum = 0;
         let averageSpeed = 0;
         let topSpeed = 0;
+        let topSpeedPoint: GpsModel.GpsPoint;
         for (let i = startAt; i < endAt; i++)
         {
             speedSum = speedSum + this.gprmcDataPoints[i].speed;
@@ -54,6 +55,7 @@ class FileProcessor {
             {
                 console.log("Old topSpeed:" + topSpeed + ", New topSpeed: " + this.gprmcDataPoints[i].speed);
                 topSpeed = this.gprmcDataPoints[i].speed;
+                topSpeedPoint = this.gprmcDataPoints[i].gpsPoint;
             }
         }
         averageSpeed = speedSum / (endAt-startAt);
@@ -65,7 +67,11 @@ class FileProcessor {
             ", speedSum: " + speedSum +
             ", averageSpeed:" + averageSpeed);
 
-        event.sender.send(Events.GpsReaderEvents.EndParsing, { "averageSpeed": (averageSpeed *  1.15077944802), "topSpeed": (topSpeed * 1.15077944802) } );
+        event.sender.send(Events.GpsReaderEvents.EndParsing, {
+             "averageSpeed": (averageSpeed *  1.15077944802),
+             "topSpeed": (topSpeed * 1.15077944802),
+             "topSpeedPoint": topSpeedPoint 
+         });
     }
 }
 

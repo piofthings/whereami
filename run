@@ -1,0 +1,3 @@
+lessc styles/theme.less styles/theme.css
+
+electron .

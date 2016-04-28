@@ -6,3 +6,5 @@ echo Compiling UI
 tsc
 
 cd ..
+echo Compiling LESS
+lessc styles/theme.less styles/theme.css
