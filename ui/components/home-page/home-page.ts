@@ -5,9 +5,9 @@ import ko = require("knockout");
 export class viewModel
 {
     title: KnockoutObservable<string> = ko.observable("Home page");
-    topSpeedInMph: KnockoutObservable<number> = ko.observable<number>(0);
-    averageSpeedInMph : KnockoutObservable<number> = ko.observable<number>(0);
     linePoints: Array<L.LatLng> = [];
+    data: KnockoutObservable<any> = ko.observable<any>();
+
     constructor(params)
     {
         L.mapbox.accessToken = 'pk.eyJ1Ijoic3VtaXRrbSIsImEiOiJjaW1wOXV2N2kwMDNtdzNrcHg2cWRvd2RvIn0.NNl0y0W49ES3PDtFRgnuwg';
@@ -37,8 +37,9 @@ export class viewModel
                     'marker-color': '#fa0'
                 })
             }).addTo(map);
-            this.topSpeedInMph(data.topSpeed);
-            this.averageSpeedInMph(data.averageSpeed);
+            console.log(JSON.stringify(data));
+            this.data(data);
+
             map.fitBounds(polyline.getBounds());
         });
 

@@ -25,6 +25,7 @@
   "dependencies": {
     "byline": "^4.2.1",
     "form-data": "^1.0.0-rc4",
+    "moment": "^2.13.0",
     "nconf": "^0.8.4",
     "node-fetch": "^1.5.1",
     "node-gps-parser": "0.0.4",

@@ -1,5 +1,14 @@
-<div class="container-fluid">
-    <div>
-        <span data-bind="text: title"></span>
+<div class="panel panel-info" style="background-color:rgba(250, 250, 250, 0.55)!important">
+    <div class="panel-heading">
+        <h3 class="panel-title" data-bind="text: title"></span>
+    </div>
+    <div class="panel-body" style="background-color:rgba(250, 250, 250, 0.55)!important">
+        <div>
+            <div>Top Speed: <span data-bind="text: topSpeedInMph"></span></div>
+            <div>Average Speed: <span data-bind="text: averageSpeedInMph"></span></div>
+            <div>Start: <span data-bind="text: startDateTime"></span></div>
+            <div>End: <span data-bind="text: endDateTime"></span></div>
+            <div>Duration: <span data-bind="text: duration"></span></div>
+        </div>
     </div>
 </div>

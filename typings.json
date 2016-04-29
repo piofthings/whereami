@@ -4,6 +4,8 @@
   "dependencies": {},
   "ambientDependencies": {
     "github-electron": "registry:dt/github-electron#0.37.6+20160417155838",
+    "moment": "registry:dt/moment#2.8.0+20160316155526",
+    "moment-node": "registry:dt/moment-node#2.11.1+20160417135035",
     "node": "registry:dt/node#4.0.0+20160412142033"
   }
 }

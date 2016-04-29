@@ -15,7 +15,8 @@ export class Spa
   }
 
   public registerComponents() {
-    this.registerComponent("home-page", "components/home-page/home-page")
+      this.registerComponent("home-page", "components/home-page/home-page");
+      this.registerComponent("stats-panel", "components/stats-panel/stats-panel");
   }
 
   public registerComponent(name: string, location: string)

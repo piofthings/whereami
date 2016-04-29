@@ -1,6 +1,7 @@
 
 <div id='map' class="map-container"></div>
-<div style="top: 20px; left: 60%; position: absolute">
-    <div>Top Speed: <span data-bind="text: topSpeedInMph"></span></div>
-    <div>Average Speed: <span data-bind="text: averageSpeedInMph"></span></div>
+<div style="top: 20px; right: 20px; position: absolute">
+    <!-- ko if: data != null -->
+    <stats-panel params="data: data"></stats-panel>
+    <!-- /ko -->
 </div>
