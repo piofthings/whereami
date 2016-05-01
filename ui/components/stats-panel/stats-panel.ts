@@ -6,7 +6,7 @@ let ko : KnockoutStatic = require("knockout");
 export class viewModel
 {
     data: KnockoutObservable<any>;
-    title: KnockoutObservable<string> = ko.observable<string>("Trip statistics!");
+    title: KnockoutObservable<string> = ko.observable<string>("Trip statistics");
     topSpeedInMph: KnockoutObservable<number> = ko.observable<number>(0);
     averageSpeedInMph : KnockoutObservable<number> = ko.observable<number>(0);
     startDateTime: KnockoutObservable<Date> = ko.observable<Date>();

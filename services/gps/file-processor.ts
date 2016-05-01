@@ -27,12 +27,13 @@ class FileProcessor {
                 {
                     //console.log("["+ gprmcData.gpsPoint.gpsLat + "," + gprmcData.gpsPoint.gpsLon + "]");
                     event.sender.send(Events.GpsReaderEvents.ReadGPRMC, item);
+                    this.gprmcDataPoints.push(gprmcData);
+
                 }
-                this.gprmcDataPoints.push(gprmcData);
             }
             if(item.dataType == "$GPGGA")
             {
-                event.sender.send(Events.GpsReaderEvents.ReadGPRMC, item);
+                //event.sender.send(Events.GpsReaderEvents.ReadGPRMC, item);
             }
         }
     }
@@ -42,7 +43,7 @@ class FileProcessor {
     }
 
     endParsing = (event: Electron.IpcMainEvent) => {
-        let tenPercent = (this.gprmcDataPoints.length /100) * 5;
+        let tenPercent = (this.gprmcDataPoints.length / 100) * 5;
         let startAt = parseInt(tenPercent + "");
         let endAt = this.gprmcDataPoints.length - startAt;
         let speedSum = 0;
@@ -111,14 +112,15 @@ class FileProcessor {
             duration = moment(endDateTime).diff(startDateTime, 'minutes', false);
             durationString = duration + (duration > 1 ? " minutes" : " minutes");
         }
-        let d
+
         event.sender.send(Events.GpsReaderEvents.EndParsing, {
              "averageSpeed": (averageSpeed *  1.15077944802),
              "topSpeed": (topSpeed * 1.15077944802),
              "topSpeedPoint": topSpeedPoint,
              "startDateTime": startDateTime.toString(),
              "endDateTime" : endDateTime.toString(),
-             "duration": durationString
+             "duration": durationString,
+             "data": this.gprmcDataPoints
          });
     }
 }

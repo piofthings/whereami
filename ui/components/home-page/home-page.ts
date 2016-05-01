@@ -26,8 +26,7 @@ export class viewModel
             }
         });
 
-        ipcRenderer.on("Events.GpsReaderEvents.EndParsing", (event, data) =>
-        {
+        ipcRenderer.on("Events.GpsReaderEvents.EndParsing", (event, data) => {
             polyline.setLatLngs(this.linePoints);
             let topSpeedPoint = data.topSpeedPoint;
             L.marker([topSpeedPoint.latitudeDegrees, topSpeedPoint.longitudeDegrees], {
@@ -37,16 +36,14 @@ export class viewModel
                     'marker-color': '#fa0'
                 })
             }).addTo(map);
-            console.log(JSON.stringify(data));
             this.data(data);
-
             map.fitBounds(polyline.getBounds());
         });
 
         ipcRenderer.on("Events.GpsReaderEvents.BeginParsing", (event, data) =>
         {
             polyline.setLatLngs([]);
-            map.setView([51.328558	, -1.45734], 12);
+            map.setView([51.5285582,-0.2416808], 11); // London
         });
     }
 }

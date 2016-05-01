@@ -4,3 +4,4 @@ libs/
 
 *.js
 *.csv
+.DS_Store

@@ -1,0 +1,10 @@
+npm install
+typings install
+rm typings/browser.d.ts
+rm -rf typings/browser
+
+cd ui
+bower install
+typings install
+rm typings/main.d.ts
+rm -rf typings/main
